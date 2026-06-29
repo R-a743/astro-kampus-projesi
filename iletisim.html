@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt ve İletişim | AstroKampüs</title>
+    <meta name="description" content="AstroKampüs Gözlem Şenliği'ne kayıt olun veya sorularınızı iletin.">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🔭 ASTROKAMPÜS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#astroNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="astroNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hizmetler.html">Gözlem Şenliği</a></li>
+                </ul>
+                <div class="navbar-btn-wrapper ms-lg-auto">
+                   <a href="iletisim.html" class="soru-sor-butonu">Soru Sor</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-5 text-center" style="background-color: #0b0f19;">
+        <div class="container py-2">
+            <h1 class="display-5 fw-bold text-white">İşlem Merkezi</h1>
+            <p class="text-secondary lead">Şenliğe kayıt yaptırabilir veya bize mesaj gönderebilirsin.</p>
+        </div>
+    </header>
+
+    <main class="container section-space">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                
+                <ul class="nav nav-tabs justify-content-center mb-4" id="formTabs" role="tablist" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                    <li class="nav-item">
+                        <button class="nav-link active fw-bold" id="kayit-tab" data-bs-toggle="tab" data-bs-target="#kayit-panel" type="button" role="tab">📝 ŞENLİK KAYDI</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link fw-bold" id="soru-tab" data-bs-toggle="tab" data-bs-target="#soru-panel" type="button" role="tab">❓ SORU SORUN</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content p-4 p-sm-5 astro-card">
+                    
+                    <div class="tab-pane fade show active" id="kayit-panel" role="tabpanel">
+                        <h2 class="h4 text-white fw-bold mb-4 text-center">Katılım Başvuru Formu</h2>
+                        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Şenlik ön kaydınız başarıyla alındı!');">
+                            <div class="mb-3">
+                                <label class="form-label text-light">Ad Soyad</label>
+                                <input type="text" class="form-control" required placeholder="Adınız Soyadınız">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">E-posta Adresi</label>
+                                <input type="email" class="form-control" required placeholder="ornek@universite.edu.tr">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">Katılmak İstediğiniz Ana Atölye</label>
+                                <select class="form-control text-white" style="background-color: #111827;">
+                                    <option>1. Derin Uzay Teleskop Gözlemleri</option>
+                                    <option>2. Gezegen Fotoğrafçılığı Atölyesi</option>
+                                    <option>4. Model Roket Tasarım Atölyesi</option>
+                                    <option>5. Takımyıldız Hikayeleri ve Mitoloji</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">Konaklama Tercihi</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="konaklama" id="kendiCadirim" checked>
+                                    <label class="form-check-label text-light" for="kendiCadirim">Kendi çadırımla geleceğim</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="konaklama" id="kulupCadiri">
+                                    <label class="form-check-label text-light" for="kulupCadiri">Kulüpten çadır talep ediyorum</label>
+                                </div>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-custom-warning btn-lg">Kayıt Başvurusunu Tamamla</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="soru-panel" role="tabpanel">
+                        <h2 class="h4 text-white fw-bold mb-4 text-center">Kulüp Yönetimine Yazın</h2>
+                        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mesajınız başarıyla iletildi.');">
+                            <div class="mb-3">
+                                <label class="form-label text-light">Ad Soyad</label>
+                                <input type="text" class="form-control" required placeholder="Adınız Soyadınız">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">E-posta Adresi</label>
+                                <input type="email" class="form-control" required placeholder="isim@ornek.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">Konu</label>
+                                <input type="text" class="form-control" required placeholder="Mesajınızın konusu nedir?">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-light">Mesajınız</label>
+                                <textarea class="form-control" rows="4" required placeholder="Sorularınızı buraya detaylıca yazabilirsiniz..."></textarea>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-custom-primary btn-lg">Soruyu Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <footer class="py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">
+            📞 +90 555 123 45 67
+        </p>
+
+        <p class="mb-1">
+            📧 info@astrokampus.com
+        </p>
+            <p class="mb-2 text-white">&copy; 2026 AstroKampüs Öğrenci Topluluğu. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
